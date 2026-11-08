@@ -1,0 +1,610 @@
+:root {
+    --background: #0b0618;
+    --surface: rgba(23, 16, 43, 0.88);
+    --purple: #a855f7;
+    --pink: #ec4899;
+    --white: #f8fafc;
+    --muted: #b8b0ca;
+    --border: rgba(255, 255, 255, 0.18);
+    --radius: 14px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    color: var(--white);
+    background-color: var(--background);
+    background-image:
+        url("../assets/images/pattern-lines.svg"),
+        url("../assets/images/pattern-squiggly-line-top.svg"),
+        url("../assets/images/pattern-squiggly-line-bottom-desktop.svg"),
+        url("../assets/images/background-desktop.png");
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+    background-position: center top, right top 105px, left bottom, center center;
+    background-size: cover, 27rem auto, 34rem auto, cover;
+    background-attachment: fixed;
+    font-family: 'Inconsolata', Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.site-header {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 18px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.logo-link {
+    display: inline-flex;
+    align-items: center;
+}
+
+.site-logo {
+    display: block;
+    width: 190px;
+    max-width: 100%;
+    height: auto;
+}
+
+.main-nav ul {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    list-style: none;
+}
+
+.main-nav a {
+    color: var(--muted);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    color: var(--white);
+}
+
+.main-nav a:focus-visible,
+.logo-link:focus-visible,
+.text-link:focus-visible {
+    outline: 2px solid var(--pink);
+    outline-offset: 4px;
+}
+
+.layout-container {
+    width: 100%;
+    max-width: 1050px;
+    margin: 0 auto;
+    flex: 1;
+    position: relative;
+    z-index: 1;
+}
+
+.home-content,
+.form-content,
+.ticket-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 45px 18px 60px;
+}
+
+.cent-in,
+.form-section {
+    width: 100%;
+    max-width: 760px;
+    text-align: center;
+}
+
+.event-label {
+    display: inline-block;
+    margin-bottom: 18px;
+    color: #d8b4fe;
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+h1,
+h2,
+h3 {
+    color: var(--white);
+    font-weight: 800;
+    line-height: 1.15;
+}
+
+h1 {
+    margin-bottom: 22px;
+    font-size: clamp(2.4rem, 6vw, 4.5rem);
+    letter-spacing: -1.5px;
+}
+
+.gradient-text {
+    background: linear-gradient(110deg, var(--purple), var(--pink), #f8b4d9);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.cent-in-description,
+.form-intro {
+    max-width: 650px;
+    margin: 0 auto 30px;
+    color: var(--muted);
+    font-size: 1.08rem;
+}
+
+.event-details {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin: 30px auto;
+}
+
+.detail-item {
+    min-width: 210px;
+    flex: 1 1 210px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px 18px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: rgba(23, 16, 43, 0.72);
+    text-align: left;
+}
+
+.detail-icon {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: rgba(168, 85, 247, 0.18);
+    color: #e9a8ff;
+    font-size: 1.3rem;
+    font-weight: 800;
+}
+
+.detail-item h2 {
+    margin-bottom: 2px;
+    color: #d8b4fe;
+    font-size: 0.9rem;
+}
+
+.detail-item p {
+    margin: 0;
+    color: var(--white);
+    font-size: 0.9rem;
+}
+
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 14px 30px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    background: linear-gradient(100deg, var(--purple), var(--pink));
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 800;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 28px rgba(168, 85, 247, 0.28);
+}
+
+.btn-primary:focus-visible {
+    outline: 3px solid var(--white);
+    outline-offset: 4px;
+}
+
+.cent-in-note {
+    margin-top: 18px;
+    color: var(--muted);
+    font-size: 0.85rem;
+}
+
+/* Registration form */
+.form-section {
+    max-width: 570px;
+    padding: 30px;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    background: rgba(11, 6, 24, 0.76);
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.22);
+}
+
+.form-section h1 {
+    font-size: clamp(2.2rem, 5vw, 3.4rem);
+}
+
+.form-intro {
+    margin-bottom: 24px;
+}
+
+#registrationForm {
+    width: 100%;
+    text-align: left;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin-bottom: 17px;
+}
+
+.form-group label {
+    color: var(--white);
+    font-weight: 700;
+}
+
+.form-control {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: rgba(23, 16, 43, 0.95);
+    color: var(--white);
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.form-control::placeholder {
+    color: #9288a8;
+}
+
+.form-control:focus {
+    outline: 2px solid var(--purple);
+    outline-offset: 2px;
+}
+
+.file-dropzone {
+    min-height: 145px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    padding: 18px;
+    border: 2px dashed rgba(216, 180, 254, 0.55);
+    border-radius: 10px;
+    background: rgba(168, 85, 247, 0.07);
+    color: var(--muted);
+    text-align: center;
+    cursor: pointer;
+}
+
+.file-dropzone:hover,
+.file-dropzone:focus,
+.file-dropzone.drag-over {
+    border-color: var(--pink);
+    background: rgba(236, 72, 153, 0.08);
+}
+
+.file-dropzone:focus-visible {
+    outline: 2px solid var(--pink);
+    outline-offset: 3px;
+}
+
+.upload-icon {
+    width: 32px;
+    height: 32px;
+}
+
+.file-dropzone input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.form-help {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin-top: 2px;
+    color: var(--muted);
+    font-size: 0.8rem;
+}
+
+.info-icon {
+    width: 16px;
+    height: 16px;
+}
+
+.error-msg {
+    min-height: 1em;
+    color: #ff9eae;
+    font-size: 0.85rem;
+}
+
+.submit-button {
+    width: 100%;
+    margin-top: 5px;
+}
+
+/* Ticket page */
+.ticket-content {
+    flex-direction: column;
+    text-align: center;
+}
+
+.ticket-intro {
+    max-width: 760px;
+    margin-bottom: 28px;
+}
+
+.ticket-intro h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+.ticket-ready {
+    margin-bottom: 5px;
+    color: var(--white);
+    font-size: 1.3rem;
+}
+
+.ticket-subtitle,
+.ticket-email {
+    margin-bottom: 5px;
+    color: var(--muted);
+}
+
+#masterEmail {
+    color: var(--pink);
+    overflow-wrap: anywhere;
+}
+
+.ticket-card {
+    width: 100%;
+    max-width: 620px;
+    min-height: 270px;
+    margin: 10px auto 25px;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid rgba(216, 180, 254, 0.65);
+    border-radius: 16px;
+    background-color: rgba(23, 16, 43, 0.9);
+    background-image: url("../assets/images/pattern-ticket.svg"), linear-gradient(120deg, rgba(23, 16, 43, 0.96), rgba(73, 28, 112, 0.78));
+    background-size: cover;
+    background-position: center;
+    text-align: left;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
+}
+
+.ticket-logo {
+    width: 185px;
+    height: auto;
+}
+
+.ticket-event-info {
+    margin-top: 8px;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+.ticket-event-info span {
+    padding: 0 6px;
+    color: var(--pink);
+}
+
+.ticket-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    margin-top: 35px;
+}
+
+.ticket-attendee {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-width: 0;
+}
+
+.ticket-avatar {
+    width: 66px;
+    height: 66px;
+    flex-shrink: 0;
+    border: 2px solid var(--purple);
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.ticket-user-info {
+    min-width: 0;
+}
+
+.ticket-user-info h2 {
+    margin-bottom: 5px;
+    font-size: 1.25rem;
+    overflow-wrap: anywhere;
+}
+
+.github-line {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.9rem;
+    overflow-wrap: anywhere;
+}
+
+.github-icon {
+    width: 18px;
+    height: 19px;
+    flex-shrink: 0;
+}
+
+.ticket-serial {
+    color: #e5c7ff;
+    font-size: 1rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    writing-mode: vertical-rl;
+}
+
+.text-link {
+    color: #e5c7ff;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.text-link:hover {
+    color: var(--pink);
+}
+
+/* Footer */
+.site-footer {
+    width: 100%;
+    padding: 20px 10px 10px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+.site-footer p {
+    margin: 0;
+}
+
+/* Tablet and mobile backgrounds */
+@media (max-width: 900px) {
+    body {
+        background-image:
+            url("../assets/images/pattern-lines.svg"),
+            url("../assets/images/pattern-squiggly-line-top.svg"),
+            url("../assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg"),
+            url("../assets/images/background-tablet.png");
+        background-position: center top, right top 95px, left bottom, center center;
+        background-size: cover, 22rem auto, 25rem auto, cover;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 14px;
+        background-image:
+            url("../assets/images/pattern-squiggly-line-top.svg"),
+            url("../assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg"),
+            url("../assets/images/background-mobile.png");
+        background-position: right top 115px, left bottom 55px, center center;
+        background-size: 13rem auto, 17rem auto, cover;
+        background-attachment: scroll;
+    }
+
+    .site-header {
+        flex-direction: column;
+        gap: 14px;
+        padding: 12px 0;
+    }
+
+    .site-logo {
+        width: 170px;
+    }
+
+    .main-nav ul {
+        gap: 22px;
+    }
+
+    .home-content,
+    .form-content,
+    .ticket-content {
+        padding: 32px 5px 42px;
+    }
+
+    .cent-in h1 {
+        letter-spacing: -0.8px;
+    }
+
+    .event-details {
+        flex-direction: column;
+        align-items: stretch;
+        margin: 24px auto;
+    }
+
+    .detail-item {
+        width: 100%;
+    }
+
+    .home-content .btn-primary {
+        width: 100%;
+    }
+
+    .form-section {
+        padding: 22px 16px;
+    }
+
+    .ticket-card {
+        min-height: 230px;
+        padding: 20px;
+    }
+
+    .ticket-logo {
+        width: 155px;
+    }
+
+    .ticket-bottom {
+        gap: 10px;
+        margin-top: 25px;
+    }
+
+    .ticket-avatar {
+        width: 54px;
+        height: 54px;
+    }
+
+    .ticket-user-info h2 {
+        font-size: 1rem;
+    }
+
+    .ticket-serial {
+        font-size: 0.8rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}

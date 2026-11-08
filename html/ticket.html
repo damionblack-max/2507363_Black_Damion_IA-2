@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your Coding Conf 2026 ticket.">
+        <title>Your Ticket | Coding Conf 2026</title>
+    
+            <!--Getting icon for tab-->
+        <link rel="icon" type="image/png" href="../assets/images/favicon-32x32.png">
+
+            <!--Connecting to google for fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+            <!-- Importing Stylesheet and ticket script -->
+        <link rel="stylesheet" href="../css/styles.css">
+    <script src="../js/ticket.js" defer></script>
+</head>
+
+        <!-- Site Header & Navigation Section -->
+    <body class="ticket-page">
+        <header class="site-header">
+            <a href="index.html" class="logo-link" aria-label="Coding Conf homepage">
+                <img src="../assets/images/logo-full.svg" alt="Coding Conf" class="site-logo">
+            </a>
+        <nav class="main-nav" aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+            <!-- Main Container and Ticket Section -->
+        <main class="layout-container ticket-content">
+            <section class="ticket-intro">
+                <p class="event-label">Coding Conf 2026</p>
+            <h1>Congrats, <span id="masterName" class="gradient-text">Attendee</span>!</h1>
+                <p class="ticket-ready">Your ticket is ready.</p>
+                    <p class="ticket-subtitle">Your registration details are saved for this browser.</p>
+                        <p class="ticket-email">Registered email: <span id="masterEmail"></span></p>
+            </section>
+
+                <!-- Making Ticket -->
+        <article class="ticket-card">
+            <div class="ticket-top">
+                <img src="../assets/images/logo-full.svg" alt="Coding Conf" class="ticket-logo">
+                    <p class="ticket-event-info">October 26, 2026 <span>/</span> Papine, Kingston</p>
+            </div>
+
+                <!-- Ticket with attendee information -->
+        <div class="ticket-bottom">
+            <div class="ticket-attendee">
+                <img id="ticketAvatar" src="" alt="" class="ticket-avatar" hidden>
+                    <div class="ticket-user-info">
+                        <h2 id="ticketName">Attendee</h2>
+                            <p class="github-line">
+                                <img src="../assets/images/icon-github.svg" alt="" class="github-icon">
+                                    <span id="ticketGithub">@username</span>
+                            </p>
+                    </div>
+            </div>
+                <span id="ticketNumber" class="ticket-serial">#00000</span>
+        </div>
+    </article>
+
+        <a href="index.html" class="text-link">Return to homepage</a>
+    </main>
+
+            <!-- Footer -->
+        <footer class="site-footer">
+            <p>&copy; 2026 Coding Conf. CIT2011 Web Programming Assignment.</p>
+        </footer>
+</body>
+</html>

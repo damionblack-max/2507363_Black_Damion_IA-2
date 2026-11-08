@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Register for Coding Conf 2026.">
+
+        <title>Register | Coding Conf 2026</title>
+
+                    <!--Getting icon for tab-->
+        <link rel="icon" type="image/png" href="../assets/images/favicon-32x32.png">
+
+                    <!--Connecting to google for fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+            
+                    <!-- Importing Stylesheet and validation script -->
+        <link rel="stylesheet" href="../css/styles.css">
+    <script src="../js/validation.js" defer></script>
+</head>
+
+                <!-- Site Header & Navigation Section -->
+    <body class="form-page">
+        <header class="site-header">
+            <a href="index.html" class="logo-link" aria-label="Coding Conf homepage">
+                <img src="../assets/images/logo-full.svg" alt="Coding Conf" class="site-logo">
+            </a>
+        <nav class="main-nav" aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="login.html" class="active" aria-current="page">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+            <!-- Main Container and Form Section  -->
+    <main class="layout-container form-content">
+        <section class="form-section">
+            <p class="event-label">Coding Conf 2026</p>
+                <h1>Your Ticket awaits you!!</h1>
+            <p class="form-intro">Enter your details below to reserve your place.</p>
+
+                <!-- Registration Form -->
+        <form id="registrationForm" novalidate>
+            <div class="form-group">
+                <label for="avatarInput">Upload Avatar</label>
+                    <div class="file-dropzone" id="dropzone" tabindex="0" role="button"
+                            aria-labelledby="avatarPrompt" aria-describedby="avatarHelp avatarError">
+                        <img src="../assets/images/icon-upload.svg" alt="" class="upload-icon">
+                            <span id="avatarPrompt">Drag and drop or click to upload</span>
+                                <input type="file" id="avatarInput" name="avatar" accept="image/jpeg,image/png">
+                    </div>
+            <p class="form-help">
+                <img src="../assets/images/icon-info.svg" alt="" class="info-icon">
+                    JPG or PNG, maximum file size 500KB.
+            </p>
+                <span class="error-msg" id="avatarError" aria-live="polite"></span>
+        </div>
+
+                        <!-- Full Name Area -->
+            <div class="form-group">
+                <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" class="form-control"
+                        placeholder="John Brown" autocomplete="name" required>
+                    <span class="error-msg" id="nameError" aria-live="polite"></span>
+            </div>
+
+                        <!-- Email Address Area -->
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" class="form-control"
+                           placeholder="user@domain.com" autocomplete="email" required>
+                    <span class="error-msg" id="emailError" aria-live="polite"></span>
+                </div>
+
+
+                        <!-- Github Username Area -->
+            <div class="form-group">
+                <label for="github">GitHub Username</label>
+                        
+                <input type="text" id="github" name="github" class="form-control"
+                    placeholder="@yourusername" required>
+                    <span class="error-msg" id="githubError" aria-live="polite"></span>
+                </div>
+
+                        <!-- Submit Button -->
+            <button type="submit" class="btn-primary submit-button">Generate My Ticket <span aria-hidden="true">→</span></button>
+        </form>
+    </section>
+</main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Coding Conf. CIT2011 Web Programming Assignment.</p>
+    </footer>
+</body>
+</html>
